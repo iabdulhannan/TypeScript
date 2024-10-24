@@ -1,0 +1,5 @@
+# Project exclude paths
+/src/Classes/classes.js
+/src/Generics/index.js
+/src/IndexSignaturesAndeyofAssertions/index.js
+/src/TypeAssertion/typeAssertion.js
