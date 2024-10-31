@@ -23,7 +23,6 @@ interface BoolCheck<T> {
   is: boolean;
 }
 
-
 const checkBoolValue = <T>(arg: T): BoolCheck<T> => {
   
   if (Array.isArray(arg) && !arg.length) {
@@ -53,6 +52,11 @@ console.log(processUser({name: 'John'}))
 
 const getUsersProperty =
   <T extends HasID, K extends keyof T>(users: T[], key: K): T[K][] => {
+    return users.map((user) => user[key])
+  }
+
+const getUsersPropertyAgain =
+  <T extends HasID>(users: T[], key: keyof T): T[keyof T][] => {
     return users.map((user) => user[key])
   }
 
